@@ -44,7 +44,8 @@ def update_countdown(countdown_window, countdown_label, seconds_left):
         countdown_label.config(text=f"{hours:02}:{minutes:02}:{seconds:02}")
         countdown_window.after(1000, update_countdown, countdown_window, countdown_label, seconds_left-1)
     else:
-        winsound.MessageBeep(winsound.MB_ICONEXCLAMATION)
+        for x in range(0,10,1):
+            winsound.MessageBeep(winsound.MB_ICONEXCLAMATION)
         countdown_label.config(text="DONE!")
 
 # Create the initial input window
